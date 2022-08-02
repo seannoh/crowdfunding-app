@@ -1,6 +1,18 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
 
+//To be moved--
+router.get('/', async (req, res) => {
+  // try {
+  // //  const whatever = await Project.findAll();
+  // //  console.log(whatever)
+  //  res.render('homepage', {value:'hello world'})
+  // } catch (err) {
+  //   res.status (400).json(err)
+  // // }
+  res.render('homepage', {value: 'hello world'})
+})
+
 router.post('/', async (req, res) => {
   try {
     const newProject = await Project.create({
